@@ -1,3 +1,3 @@
-This is an extreamly simple Flordia Vacation static site built for my Web Design class. It contains two pages, a landing page and an about page which has basic information about Flordia.
+This repository acts as collection of static pages created for my HighSchool Web Design class. 
 
-[Published site](https://flordia-site.hpaulson.smc.wtf)
+All of these projects are hosted [Here](https://hpaulson.github.io/web-design/).
