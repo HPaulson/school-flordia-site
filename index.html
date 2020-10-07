@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flordia</title>
+</head>
+<body class="bg">
+    <div id="landing">
+        <h1 id="title">Flordia</h1>
+        <p id="quote">The vacation of a lifetime.</p>
+        <button class="learnMore" onclick="location.href='./about.html'">Learn more.</button>
+    </div>
+</body>
+<style>
+body, html {
+  height: 100%;
+}
+#landing {
+    padding-left: 100px
+}
+#title {
+    color: white;
+    font-size: 150px;
+    padding-top: 50px;
+    line-height: 10%;
+}
+#quote {
+    color: white;
+    font-size: 50px;
+    line-height: 10%;
+}
+.bg {
+  background-image: url("https://www.gannett-cdn.com/-mm-/72d7a379e79c1e2d3c2cb6f4c6c56235a664d809/c=0-373-4032-2651/local/-/media/2017/10/25/USATODAY/USATODAY/636445195331399746-1.JPG");
+  height: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.learnMore {
+	background: linear-gradient(to right, gold, darkorange);
+	color: white;
+	--width: 150px;
+	--height: 50px;
+	width: 150px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 20px;
+	font-family: sans-serif;
+	letter-spacing: .01em;
+	border: 1px solid darkgoldenrod;
+	border-radius: 2em;
+	transform: perspective(250px) rotateY(-10deg);
+	text-shadow: 2.5px 1px .5px rgba(0, 0, 0, 0.2);
+	box-shadow: 2px 0 0 5px rgba(0, 0, 0, 0.2);
+	transition: 0.5s;
+	position: relative;
+	overflow: hidden;
+}
+
+.learnMore:hover {
+	transform: perspective(250px) rotateY(10deg);
+	text-shadow: -2.5px 1px .5px rgba(0, 0, 0, 0.2);
+	box-shadow: -2px 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+</style>
+</html>
