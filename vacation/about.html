@@ -1,15 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+  $("#slideshow > div:gt(0)").hide();
+  
+  setInterval(function() {
+    $('#slideshow > div:first')
+      .fadeOut(1000)
+      .next()
+      .fadeIn(1000)
+      .end()
+      .appendTo('#slideshow');
+  }, 3000);
+  });
+  </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flordia - About</title>
+    <title>Florida - About</title>
 </head>
 <body>
-    
+    <div class="header">
+        <img src="../assets/folordiaAboutHeader.png" alt="">
+    <p>The sunshine state.</p>
+</div>
+<div class="main">
+    <h1>Where to go?</h1>
+    <ul>
+      <li>Disney World</li>
+      <li>Sea World</li>
+      <li>Universal Studios</li>
+      <li>Citrus Farms</li>
+      <li>Clearwater Beach</li>
+    </ul>
+</div>
+<div id="slideshow">
+  <div>
+     <img class="slideimg" src="../assets/flordiaMap.png">
+  </div>
+  <div>
+    <img class="slideimg" src="../assets/disnye.jpeg">
+  </div>
+  <div>
+    <img class="slideimg" src="../assets/seaworld.jpeg">
+  </div>
+  <div>
+    <img class="slideimg" src="../assets/universal.jpeg">
+  </div>
+  <div>
+    <img class="slideimg" src="../assets/citrus.jpg">
+  </div>
+  <div>
+    <img class="slideimg" src="../assets/clearwater.jpeg">
+  </div>
+
+</div>
 </body>
 </html>
-
 <style>
+
+  body {
+    background-color: #2a2a2a;
+  }
+.main {
+  position: relative;
+  text-align: center;
+  
+}
+.main h1 {
+    color: white;
+    font-size: 100px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.main ul {
+  top:50px;
+  margin-left:35%;
+  margin-bottom: auto;
+  margin-top: auto;
+  text-align: Left;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+}
+.header {
+  position: relative;
+  text-align: center;
+}
+.header img {
+    width:100%;
+    height: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header p {
+    color: white;
+    position: absolute;
+    position: absolute;
+    top: 0px;
+    left: 75px;
+    font-size: 50px;
+}
+.main {
+    display: block;
+    position: relative;
+    text-align: center;
+}
+#slideshow { 
+  top: -200px;
+    right: -150px;
+    margin: 50px auto; 
+    position: relative; 
+    width: 200px; 
+    height: 200px; 
+    padding: 10px; 
+    box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
+
+#slideshow > div { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+    bottom: 10px; 
+}
+.slideimg {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: block;
+  max-width:200px;
+  max-height:200px;
+  min-width:200px;
+  min-height:200px;
+  height: auto;
+}
 
 </style>
