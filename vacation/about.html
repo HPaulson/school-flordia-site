@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-  $(document).ready(function(){
-  $("#slideshow > div:gt(0)").hide();
-  
-  setInterval(function() {
-    $('#slideshow > div:first')
-      .fadeOut(1000)
-      .next()
-      .fadeIn(1000)
-      .end()
-      .appendTo('#slideshow');
-  }, 3000);
-  });
-  </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Florida - About</title>
@@ -23,38 +8,26 @@
 <body>
     <div class="header">
         <img src="../assets/folordiaAboutHeader.png" alt="">
-    <p>The sunshine state.</p>
+    <p><b>The sunshine state.</b></p>
 </div>
 <div class="main">
-    <h1>Where to go?</h1>
-    <ul>
-      <li>Disney World</li>
-      <li>Sea World</li>
-      <li>Universal Studios</li>
-      <li>Citrus Farms</li>
-      <li>Clearwater Beach</li>
-    </ul>
+  <div class="Place">
+  <h2>Disney World</h2>
+  <P>Experience the most magical place on earth- right here in Central Florida! Here in Disney World, the entire family can have a great time! Enjoy brand new attractions such as Galaxy's Edge, and classics such as the Carousel of Progress!</P>
+  <img src="../assets/disnye.jpeg">
 </div>
-<div id="slideshow">
-  <div>
-     <img class="slideimg" src="../assets/flordiaMap.png">
-  </div>
-  <div>
-    <img class="slideimg" src="../assets/disnye.jpeg">
-  </div>
-  <div>
-    <img class="slideimg" src="../assets/seaworld.jpeg">
-  </div>
-  <div>
-    <img class="slideimg" src="../assets/universal.jpeg">
-  </div>
-  <div>
-    <img class="slideimg" src="../assets/citrus.jpg">
-  </div>
-  <div>
-    <img class="slideimg" src="../assets/clearwater.jpeg">
-  </div>
-
+<hr>
+<div class="Place">
+<h2>Clear water Beach</h2>
+<P>While vising the Sunshine state, don't forget to visit America's Beach! Clear water beach, famous for it's beautiful blue water, is a must-see location on you vacation to Floridia! From clear-blue ocean to bright blue sky, Clear water is the perfect spot for a relaxing day on the sand!</P>
+<img src="../assets/clearwater.jpeg">
+</div>
+<hr>
+<div class="Place">
+<h2>Sea World Orlando</h2>
+<P>Make a splash and see the wonders of the deep ocean at Orlando's Sea World! From amazing animal shows to great attractions for the whole family, Sea World is a great visit for theme-park enthusiasts! Sea world offers thrilling rides, Inspiring habitats, and so much more!</P>
+<img src="../assets/seaworld.jpeg">
+</div>
 </div>
 </body>
 </html>
@@ -66,22 +39,34 @@
 .main {
   position: relative;
   text-align: center;
-  
-}
-.main h1 {
-    color: white;
-    font-size: 100px;
-    font-family: 'Times New Roman', Times, serif;
-}
-.main ul {
-  top:50px;
-  margin-left:35%;
-  margin-bottom: auto;
-  margin-top: auto;
-  text-align: Left;
   color: white;
   font-family: 'Times New Roman', Times, serif;
-  font-size: 25px;
+}
+.Place p img {
+  margin-top: 5%;
+}
+.Place {
+  display: block;
+  margin-bottom: 50px;
+}
+.Place img {
+  margin-left: -22%;
+  margin-top: -600px;
+  max-width: 250px;
+  max-height: 250px;
+  min-width: 250px;
+  min-height: 250px;
+}
+.Place p {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 47%;
+  width: 525px;
+  text-align: left;
+  font-size: 30px;
+}
+.main h2 {
+  font-size: 50px;
 }
 .header {
   position: relative;
@@ -95,47 +80,19 @@
     margin-right: auto;
 }
 .header p {
+    font-family:sans-serif;
     color: white;
     position: absolute;
     position: absolute;
-    top: 0px;
-    left: 75px;
-    font-size: 50px;
+    top: -50px;
+    left: 40px;
+    font-size: 65px;
 }
 .main {
     display: block;
     position: relative;
     text-align: center;
 }
-#slideshow { 
-  top: -200px;
-    right: -150px;
-    margin: 50px auto; 
-    position: relative; 
-    width: 200px; 
-    height: 200px; 
-    padding: 10px; 
-    box-shadow: 0 0 20px rgba(0,0,0,0.4); 
-}
 
-#slideshow > div { 
-    position: absolute; 
-    top: 10px; 
-    left: 10px; 
-    right: 10px; 
-    bottom: 10px; 
-}
-.slideimg {
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-  display: block;
-  max-width:200px;
-  max-height:200px;
-  min-width:200px;
-  min-height:200px;
-  height: auto;
-}
 
 </style>
